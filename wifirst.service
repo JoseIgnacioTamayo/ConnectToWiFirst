@@ -1,0 +1,11 @@
+[Unit]
+Description = Script that connect to Wifirst Wifi
+Wants = network-online.target
+After = network.target network-online.target
+
+[Service]
+Type = simple
+ExecStart = /home/osmc/ConnectToWifirst.sh
+
+[Install]
+WantedBy = multi-user.target
